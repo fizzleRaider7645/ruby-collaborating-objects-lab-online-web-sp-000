@@ -24,6 +24,7 @@ class Artist
     if self.all.find { |artist| artist.name == artist_name }.nil?
       new_artist = Artist.new(artist_name)
       new_artist.save
+      new_artist
     else
       nil
     end
