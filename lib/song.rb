@@ -10,7 +10,7 @@ class Song
     artist_name = parsed[0]
     title = parsed[1]
     new_song = self.new(title)
-    new_artist = Artist.new(artist_name)
+    # new_artist = Artist.new(artist_name)
     new_song.artist = new_artist
     new_artist.save
     new_song
