@@ -11,7 +11,7 @@ class Song
     title = parsed[1]
     new_song = self.new(title)
     new_artist = Artist.new(artist_name)
-    new_song.artist = new_artist
+    new_song.artist = Artist.find_or_create_by_name(artist_name)
     new_artist.save
     new_song
   end
